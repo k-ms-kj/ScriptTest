@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
-    private int[] _array = { 1, 2, 4, 5, 6 };
+    private int[] _array = { 1, 2, 3, 4, 5 };
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,7 +34,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         string text = "";
         for (int i = 0; i < num; i++)
         {
-            text += i.ToString() + " ";
+            text += _array[i].ToString() + " ";
         }
         Debug.Log($"NormalOrder = {text}");
     }
@@ -46,9 +46,9 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         int num = _array.Length;
         string text = "";
-        for (int i = num; i > 0; i--)
+        for (int i = num - 1; i >= 0; i--)
         {
-            text += i.ToString() + " ";
+            text += _array[i].ToString() + " ";
         }
         Debug.Log($"ReverseOrder = {text}");
     }
